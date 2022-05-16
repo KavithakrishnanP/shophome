@@ -1,0 +1,146 @@
+.navbar {
+	display: flex;
+	/*To keep them aligned in a same x-axis*/
+	align-items: center;
+	background: whitesmoke;
+	height: 4rem;
+	padding: 0 1.5rem 0 2rem;
+	/* Making it stick to top of the screen when scroliing */
+	position: sticky;
+	top: 0;
+	/*To make sure its on top of everything*/
+	z-index: 10;
+	border-bottom: 1px solid lightgrey;
+}
+/*Let's Shop - heading styles*/
+header {
+	font-weight: bold;
+	font-size: 1.25rem;
+	letter-spacing: 1.5px;
+}
+
+.menuList {
+	display: none;
+}
+/*Hamburger icon*/
+.menuIcon {
+	display: flex;
+	justify-content: center;
+	background: transparent;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 0 0 0 auto;
+}
+
+/*Border for the menuicon when clicked or hovered*/
+.menuIcon:hover,
+.menuIcon:focus,
+.menuIcon:active {
+	border: 5px solid darkgray;
+}
+/*Elements of the menu*/
+.dropdown {
+	cursor: pointer;
+	padding: 0.5rem 2rem;
+	background: whitesmoke;
+	display: flex;
+	/*Keeping them in a column*/
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.dropdown p:nth-child(2) {
+	color: darkgrey;
+}
+
+.dropdown p:nth-child(2):hover {
+	color: black;
+}
+.dropdown button {
+	cursor: pointer;
+	width: 7rem;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+	font-size: 1.15rem;
+	border-radius: 0.5rem;
+}
+/*Items count*/
+.dropdown span {
+	width: 1.65rem;
+	height: 1.65rem;
+	border-radius: 50%;
+	background: black;
+	color: whitesmoke;
+	margin-left: auto;
+}
+.dropdown p {
+	padding: 0.25rem 0;
+	display: flex;
+	align-items: center;
+}
+
+/*Shop link in dropdowns*/
+.shop {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	color: darkgrey;
+}
+.shop:hover {
+	color: black;
+}
+/*Categories under shop*/
+.categories {
+	background: white;
+	border: 1px solid lightgrey;
+}
+.categories p {
+	padding: 0.25rem 1rem;
+	width: 100%;
+	color: darkgray;
+}
+.categories p:nth-child(1) {
+	border-bottom: 1px solid lightgrey;
+}
+/*Cart button*/
+.dropdown button:hover {
+	background: black;
+	color: whitesmoke;
+}
+
+/*When screen size is more than 996px*/
+@media (min-width: 996px) {
+	.navbar {
+		height: 5rem;
+		padding: 0 0 0 2rem;
+	}
+	.menuIcon {
+		display: none;
+	}
+	.menuList {
+		display: inline-block;
+	}
+	.menuList .dropdown {
+		flex-direction: row;
+	}
+	.shop {
+		justify-content: center;
+		align-items: center;
+	}
+	.categories {
+		position: absolute;
+		top: 3rem;
+		left: 0.25rem;
+		width: 10rem;
+	}
+	.dropdown {
+		width: 85vw;
+	}
+	.dropdown button {
+		margin-left: auto;
+	}
+	.dropdown p {
+		padding-right: 1.5rem;
+	}
+}

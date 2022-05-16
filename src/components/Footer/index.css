@@ -1,0 +1,16 @@
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 4rem;
+	color: whitesmoke;
+	background: black;
+	font-size: 0.75rem;
+	letter-spacing: 1.5px;
+}
+@media (min-width: 768px) {
+	footer {
+		height: 5rem;
+		font-size: 1.25rem;
+	}
+}
